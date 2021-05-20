@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	color: #fff;
+	height: 100vh;
+	letter-spacing: 0.1rem;
+	user-select: none;
+}
+
+.title {
+	font-size: 50px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.dot {
+	width: 7px;
+	height: 7px;
+	background-color: yellow;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.red {
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.cards {
+	display: flex;
+	padding: 4rem 2rem;
+	overflow-x: auto;
+}
+
+.card {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	width: 350px;
+	height: 430px;
+	min-width: 250px;
+	padding: 1.5rem;
+	border-radius: 16px;
+	background-color: rgb(34, 33, 33);
+	box-shadow: -2rem 0 3rem #000;
+	transform: 0.2s;
+}
+
+.card:hover {
+	transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+	transform: translateX(130px);
+}
+
+/* select every element that is the first child of its parent */
+.card:not(:first-child) {
+	margin-left: -130px;
+}
+
+.card-img img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 10px;
+	border-radius: 16px;
+}
+
+.card h2 {
+	color: yellow;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.title {
+		font-size: 30px;
+	}
+}
